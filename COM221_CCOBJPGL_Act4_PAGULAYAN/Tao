@@ -1,0 +1,50 @@
+package ClassPack.MachineProblem1;
+import java.util.Scanner;
+
+public class MainActivity {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("What is your name? ");
+        String name = sc.nextLine();
+        System.out.println("What is your age? ");
+        int age = sc.nextInt();
+        Tao objTao = new Tao(name, age);
+        
+        System.out.println(objTao.getPangalan() + " is your name.");
+        System.out.println(objTao.getEdad() + " is years old.");
+    }
+}
+
+
+
+
+
+
+package ClassPack.MachineProblem1;
+import java.util.Scanner;
+
+public class Tao{
+
+    private String pangalan;
+    private int edad;
+    
+
+    public Tao(String pangalan, int edad){
+        this.pangalan = pangalan;
+        this.edad = edad;
+    }
+    public void setPangalan(String pangalan) {
+        this.pangalan = pangalan;
+    }
+    
+    public String getPangalan(){
+        return pangalan;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+}
