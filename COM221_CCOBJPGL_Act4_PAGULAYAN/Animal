@@ -1,0 +1,51 @@
+package ClassPack.MachineProblem2;
+import java.util.Scanner;
+
+public class MainActivity {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("What type is your dog? ");
+        String type = sc.nextLine();
+        System.out.println("What is the name of your dog? ");
+        String name = sc.nextLine();
+        System.out.println("What is your dog breed? ");
+        String breed = sc.nextLine();
+        Animal objAnimal = new Animal(type, name, breed);
+        
+        System.out.println(objAnimal.getType() + " is your dog's type.");
+        System.out.println(objAnimal.getName() + " is your dog's name.");
+        System.out.println(objAnimal.getName() + " is your dog's breed.");
+    }
+}
+
+
+
+package ClassPack.MachineProblem2;
+
+public class Animal{
+
+    protected String type;
+    protected String name;
+    protected String breed;
+    
+    public Animal(String type, String name, String breed){
+        this.type = type;
+        this.name = name;
+        this.breed = breed;
+    }
+
+    public String getType(){
+        return type;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getBreed(){
+        return breed;
+    }
+}
