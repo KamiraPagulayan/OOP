@@ -1,0 +1,53 @@
+AgeValidation.java //class
+
+import java.util.InputMismatchException;
+
+public class AgeValidation {
+
+    private int age;
+
+    public void  ageChecker(int age){
+        if(age < 18){
+            throw new InputMismatchException("Acess Denied : Minor Age");
+        }else{
+            System.out.println("Access Granted : Legal Age");
+        }
+    }
+}
+
+
+
+App.java //class
+import java.util.InputMismatchException;
+
+public class App {
+
+    public static void main(String[]args) {
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        try{
+            System.out.print("Enter a Dividend: ");
+            int dividend = sc.nextInt();
+            System.out.print("Enter a Divisor: ");
+            int divisor = sc.nextInt();
+            System.out.println("The qoutient is" + (dividend/divisor));
+
+            int[] myNumbers = {1,2,3};
+            System.out.println(myNumbers[10]);
+        }  catch (ArithmeticException aeRef) {
+            System.out.println("Message: Error you cannot divide a number to zero.\nError Code: " + aeRef);
+        }  catch (InputMismatchException imeRef) {
+            System.out.println("Message: The App cannot accept a letter.\nError Code: " + imeRef);
+        }  catch (IndexOutOfBoundsException ibeRef) {
+            System.out.println("Message: No index found.\nError Code: " + ibeRef);
+        } finally {
+            System.out.println("I don't care");
+        }
+
+        System.out.println("Continue...");
+
+    }
+}
+
+    
+
+
